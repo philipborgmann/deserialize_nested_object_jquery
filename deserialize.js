@@ -1,6 +1,7 @@
 $(function() {
 var myObj = {notNested: "nono", nestedElems: {001: {name: "hello"}, 002: {name: "test", secondvalue: "supertest"}}}
 
+/* Function taken from here: https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference */
 function index(obj,is, value) {
     if (typeof is == 'string')
         return index(obj,is.split('.'), value);
